@@ -1,0 +1,53 @@
+﻿<?xml version= "1.0" encoding= "utf-8" standalone= "no" ?>
+<RevitAddIns>
+  <AddIn Type = "Command">
+    <Assembly > ContestPlugins.dll </Assembly>
+    <AddInId> 239BD853-36E4-461f-9171-C5ACEDA4E721 </AddInId>
+    <FullClassName> ContestPlugins.RotatePluginClass </FullClassName >
+    <Text> Rotate </Text>
+    <VendorId>
+      ADSK
+    </VendorId>
+    <VendorDescription> Autodesk, www.autodesk.com </VendorDescription >
+  </AddIn>
+  <AddIn Type = "Command">
+    <Assembly > ContestPlugins.dll </Assembly>
+    <AddInId> 2a6c39f0-7178-41c5-a7fc-a3ed8585db81 </AddInId>
+    <FullClassName> ContestPlugins.MovePluginClass </FullClassName >
+    <Text> Move </Text>
+    <VendorId>
+      ADSK
+    </VendorId>
+    <VendorDescription> Autodesk, www.autodesk.com </VendorDescription >
+  </AddIn>
+  <AddIn Type = "Command">
+    <Assembly > ContestPlugins.dll </Assembly>
+    <AddInId> 4acaa7c3-c1ff-4139-a8c0-9ffe7880ae77 </AddInId>
+    <FullClassName> ContestPlugins.StretchPluginClass </FullClassName >
+    <Text> Stretch </Text>
+    <VendorId>
+      ADSK
+    </VendorId>
+    <VendorDescription> Autodesk, www.autodesk.com </VendorDescription >
+  </AddIn>
+  <AddIn Type = "Command">
+    <Assembly > ContestPlugins.dll </Assembly>
+    <AddInId> 8dde812d-668c-4dbb-93bf-c42bf502698f </AddInId>
+    <FullClassName> ContestPlugins.CopyPluginClass </FullClassName >
+    <Text> Copy </Text>
+    <VendorId>
+      ADSK
+    </VendorId>
+    <VendorDescription> Autodesk, www.autodesk.com </VendorDescription >
+  </AddIn>
+  <AddIn Type = "Command">
+    <Assembly > ContestPlugins.dll </Assembly>
+    <AddInId> 18471c95-ef41-41b2-aab0-799705d8cc4f </AddInId>
+    <FullClassName> ContestPlugins.CalculatePluginClass </FullClassName >
+    <Text> CalculateS </Text>
+    <VendorId>
+      ADSK
+    </VendorId>
+    <VendorDescription> Autodesk, www.autodesk.com </VendorDescription >
+  </AddIn>
+  </RevitAddIns>
