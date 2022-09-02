@@ -32,14 +32,16 @@ namespace ContestPlugins
                 Math.Abs(firstFloorMinCoord.Y - firstFloorMaxCoord.Y),
                 Math.Abs(firstFloorMinCoord.Z - firstFloorMaxCoord.Z));
 
-            var newTransaction = new Transaction(doc);
+            using (var newTransaction = new Transaction(doc))
+            {
 
-            newTransaction.Start("MoveElement");
+                newTransaction.Start("Copy");
 
-            ElementTransformUtils.CopyElements(doc,
-                allElementsId,
-                new XYZ(newFloorTranslation.X, newFloorTranslation.Y, newFloorTranslation.Z));
-            newTransaction.Commit();
+                ElementTransformUtils.CopyElements(doc,
+                    allElementsId,
+                    new XYZ(newFloorTranslation.X, newFloorTranslation.Y, newFloorTranslation.Z));
+                newTransaction.Commit();
+            }
 
             return Result.Succeeded;
         }

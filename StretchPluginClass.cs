@@ -37,11 +37,12 @@ namespace ContestPlugins
 
             Line newLine = Line.CreateBound(newXYZs, newXYZe);
 
-            var newTransaction = new Transaction(doc, "stretch");
-            newTransaction.Start("stretch");
-            firstWallLocationCurve.Curve = newLine;
-            newTransaction.Commit();
-
+            using (var newTransaction = new Transaction(doc))
+            {
+                newTransaction.Start("rotate");
+                firstWallLocationCurve.Curve = newLine;
+                newTransaction.Commit();
+            }
             return Result.Succeeded;
         }
     }

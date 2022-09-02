@@ -25,18 +25,19 @@ namespace ContestPlugins
             ICollection<Element> allElements = allWalls.Union(allFloor).ToList();
             ICollection<ElementId> allElementsId = allElements.Select(x => x.Id).ToList();
 
-            if (allElementsId.Count > 4)
-            {
+
                 var floor = (Floor)allFloor.First();
                 var floorBoundingBox = floor.get_BoundingBox(doc.ActiveView);
                 var floorBoundingBoxXYZ = (floorBoundingBox.Min + floorBoundingBox.Max) / 2;
-                
 
-                var newTransaction = new Transaction(doc);
+
+            using (var newTransaction = new Transaction(doc))
+            {
                 newTransaction.Start("MoveElement");
                 ElementTransformUtils.MoveElements(doc, allElementsId, new XYZ(-floorBoundingBoxXYZ.X, -floorBoundingBoxXYZ.Y, -floorBoundingBoxXYZ.Z));
                 newTransaction.Commit();
             }
+
 
             return Result.Succeeded;
         }
